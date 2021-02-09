@@ -1,0 +1,91 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+@import "palette";
+@import "~bootstrap/scss/bootstrap";
+@import "~animate.css/animate.min";
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$lisoplusWEB-primary: mat-palette($mat-green);
+$lisoplusWEB-accent: mat-palette($mat-grey, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$lisoplusWEB-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$lisoplusWEB-theme: mat-light-theme((
+  color: (
+    primary: $lisoplusWEB-primary,
+    accent: $lisoplusWEB-accent,
+    warn: $lisoplusWEB-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($lisoplusWEB-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.clickable{
+  cursor: pointer;
+}
+
+
+//COLORs
+.primary-color{
+  color: $liso-primary;
+}
+.dark-color{
+  color: $liso-dark;
+}
+
+//BGs
+.primary-bg{
+  background-color: $liso-primary;
+}
+.light-bg{
+  background-color: $liso-ligth;
+}
+
+
+//BORDERS
+.b-bottom{
+  border-bottom-color: $liso-primary;
+  border-bottom: solid 3px;
+}
+
+//ANIMATE ON SCROLL
+.animated-delay-1 {
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+}
+
+.animated-delay-2 {
+  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
+}
+
+.animated {
+  visibility: visible !important;
+}
+.hide-on-init {
+  visibility: hidden;
+}

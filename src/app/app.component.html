@@ -1,0 +1,20 @@
+<mat-sidenav-container class="h-100 bg-app">
+  <mat-sidenav #sidenav role="navigation" class="" (swipeleft)="sidenav.close()" >
+    <!--this is a place for us to add side-nav code-->
+    <app-menu (sidenavClose)="sidenav.close()"></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ngx-scrolltop
+      [backgroundColor]="'#212121'"
+      [symbolColor]="'#fafafa'"
+      [size]="40"
+      [mode]="'classic'"
+      position="right"
+      theme="gray">
+    </ngx-scrolltop>
+    <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+    <!--in here all the content must reside. We will add a navigation header as well-->
+    <app-main class=""></app-main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<ngx-scrolltop></ngx-scrolltop>

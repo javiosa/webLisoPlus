@@ -1,0 +1,27 @@
+<div class="py-4 light-bg">
+  <h1 class="mat-title fw-bolder primary-color text-center my-0">PREGUNTAS FRECUENTES</h1>
+</div>
+<div class="container my-3">
+  <!--  SEARCH-->
+  <div class="input-group flex-nowrap">
+    <span class="input-group-text bg-transparent" id="addon-wrapping"><mat-icon>search</mat-icon></span>
+    <input type="text" [(ngModel)]="searchTerm.question" class="form-control" placeholder="Buscar..." aria-label="Buscar" aria-describedby="addon-wrapping">
+  </div>
+  <!--  LIST-->
+  <div class="my-3">
+    <mat-accordion class="">
+      <mat-expansion-panel class="my-1" *ngFor="let q of questions | filterBy: searchTerm;">
+        <mat-expansion-panel-header class="mat-expansion-h py-4 px-2">
+          <mat-panel-title class="fs-6">{{q.question}}</mat-panel-title>
+        </mat-expansion-panel-header>
+        {{q.answer}}
+      </mat-expansion-panel>
+    </mat-accordion>
+    <!-- in case you want to show empty message -->
+    <div class="p-5 text-center" *ngIf="(questions | filterBy: searchTerm).length === 0">
+      <p class="fs-4">No hay resultados.</p>
+    </div>
+  </div>
+</div>
+
+

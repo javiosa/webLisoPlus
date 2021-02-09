@@ -1,0 +1,16 @@
+@import "src/palette";
+
+.nav-link{
+  color: $liso-primary;
+  font-weight: lighter;
+  &:hover{
+    color: $liso-dark;
+    font-weight: normal;
+  }
+  &.active{
+    color: $liso-dark;
+    font-weight: normal;
+    border-bottom: solid 2px $liso-dark;
+  }
+
+}

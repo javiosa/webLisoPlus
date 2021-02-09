@@ -1,0 +1,6 @@
+export const faqs = [
+  { id: 'A', question: '¿Qué es la enfermedad de Pompe?', answer: 'La glucogenosis tipo II o enfermedad de Pompe, es una rara enfermedad de almacenamiento lisosómico hereditaria autosómica recesiva, causada por una disfunción de la enzima Glucosil Transferasa α(1→4) ácida lisosómica, también denominada maltasa ácida.'},
+  { id: 'B', question: '¿Qué es la enfermedad de Fabry?', answer: 'La enfermedad de Fabry es una enfermedad de almacenamiento lisosómico hereditaria ligada al cromosoma X derivada de mutaciones en el gen que codifica la enzima α-galactosidasa. Fue descrita por Johannes Fabry y William Anderson en 1898.'},
+  { id: 'C', question: '¿Qué es la enfermedad de Gaucher?', answer: 'La enfermedad de Gaucher es una enfermedad hereditaria poco frecuente en donde una persona no tiene una cantidad suficiente de una enzima llamada glucocerebrosidasa. Esto causa una acumulación de sustancias grasosas en el bazo, hígado, pulmones, huesos y, a veces, en el cerebro.'},
+  { id: 'D', question: '¿Qué es la Mucopolisacaridosis tipo I?', answer: 'La mucopolisacaridosis tipo I (MPS I) es una rara enfermedad en la cual el cuerpo carece o no tiene suficiente cantidad de una enzima necesaria para descomponer cadenas largas de moléculas de azúcar. Estas cadenas son llamadas glucosaminoglucanos (anteriormente denominados mucopolisacáridos).'}
+];

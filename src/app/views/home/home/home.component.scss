@@ -1,0 +1,24 @@
+@import "src/palette";
+.bg{
+  background: $liso-primary url("~src/assets/bg/bg5Resize.jpg") repeat-y center bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.bg-infosection{
+  background-color: rgba(219, 219, 219, 0.8);
+}
+.primary-bg-op{
+  background-color: rgba(10, 125, 83, 0.8);
+}
+
+.primary-bg-faqs{
+  background: $liso-primary url("~src/assets/bg/bg4Resize.jpg") bottom right;
+  background-size: cover;
+}
+
+.opacity-partial{
+  opacity: 0.5;
+}
+.no-opacity{
+  opacity: 1;
+}

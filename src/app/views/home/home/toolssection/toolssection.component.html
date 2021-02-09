@@ -1,0 +1,15 @@
+
+<div class="container text-center p-sm-5">
+  <div class="text-center">
+    <h1 class="mat-title">Herramientas</h1>
+  </div>
+  <div class="row justify-content-center mx-0">
+    <div class="col-4 col-sm-3" *ngFor="let tool of tools;">
+      <div class="rounded light-bg text-dark m-sm-3 p-2 clickable mat-elevation-z2">
+        <img [src]="tool.img" class="img-fluid w-50 m-3">
+        <mat-divider></mat-divider>
+        <p class="my-2">{{tool.name}}</p>
+      </div>
+    </div>
+  </div>
+</div>

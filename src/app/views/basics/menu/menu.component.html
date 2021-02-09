@@ -1,0 +1,73 @@
+<!-- GALCOVID LOGO -->
+<button autofocus="false" mat-icon-button class="fixed-top float-right m-2" (click)="onSidenavClose()"><mat-icon>close</mat-icon></button>
+<div class="p-5 text-center accent-color">
+  <img src="assets/logo/lisoplus.png" class="img-fluid" />
+</div>
+<!-- Lang -->
+<mat-nav-list>
+  <a
+    class="text-decoration-none"
+    mat-list-item
+    routerLink="/"
+    (click)="onSidenavClose()"
+  >
+    <mat-icon class="text-covid-primary">home</mat-icon>
+    <span class="pl-2 text-secondary">Inicio</span>
+  </a>
+  <a
+    class="text-decoration-none"
+    mat-list-item
+    routerLink="/info"
+    (click)="onSidenavClose()"
+  >
+    <mat-icon class="text-covid-primary">help</mat-icon
+    ><span class="pl-2 text-secondary">Información</span>
+  </a>
+  <a
+    class="text-decoration-none"
+    mat-list-item
+    routerLink="/blog"
+    (click)="onSidenavClose()"
+  >
+    <mat-icon class="text-covid-primary">school</mat-icon
+    ><span class="pl-2 text-secondary">Blog</span>
+  </a>
+  <a
+    class="text-decoration-none"
+    mat-list-item
+    href="https://www.lisoplus.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    (click)="onSidenavClose()"
+  >
+   <span class="pl-2 text-secondary">LisoPlus</span>
+  </a>
+  <a
+    class="text-decoration-none"
+    mat-list-item
+    routerLink="/termsData"
+    (click)="onSidenavClose()"
+  >
+    <mat-icon class="text-covid-primary">policy</mat-icon
+    ><span class="pl-2 text-secondary" translate="legal"></span>
+  </a>
+  <!--<a
+    class="text-decoration-none"
+    mat-list-item
+    routerLink="/cookies"
+    (click)="onSidenavClose()"
+  >
+    <img
+      src="assets/cookies.svg"
+      style="max-width: 20px"
+      class="ml-1 img-fluid"
+    />
+    <span class="pl-2 text-secondary">Cookies</span>
+  </a>-->
+  <mat-divider></mat-divider>
+  <div class="text-center my-2 fixed-bottom">
+    <span
+    >2021<mat-icon class="text-small text-muted">copyright</mat-icon></span
+    >
+  </div>
+</mat-nav-list>
