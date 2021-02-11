@@ -1,1 +1,33 @@
-<p>info works!</p>
+<div class="py-4 light-bg">
+  <h1 class="mat-title fw-bolder primary-color text-center my-0">INFORMACIÓN</h1>
+</div>
+<div class="text-center container my-3">
+  <h3 class="text-uppercase fs-3 light-color">enfermedades por depósito lisosomal</h3>
+  <p class="fs-6 text-secondary text-start"> Las enfermedades por depósito lisosomal son un grupo heterogéneo de unos 50 trastornos metabólicos hereditarios. Estos trastornos tienen en común un déficit genético de enzimas u otras proteínas relacionadas con la hidrólisis de macromoléculas en los lisosomas.</p>
+</div>
+<div class="container text-center p-sm-5">
+  <div class="">
+    <div class="row align-items-stretch">
+      <div class="col-6">
+        <a href="" class="text-decoration-none text-black-50" [routerLink]="['enfermedades',goTo]">
+          <div class="text-center p-2 mat-elevation-z2 rounded-3 h-100 bg-white">
+            <div class="mt-2"> <img src="assets/svg/004-gene-mutation-1.svg" width="50" height="50" /> </div>
+            <h3 class="mat-title mt-3">ENFERMEDADES</h3>
+            <span class="mat-small">Pompe, Fabry, Gaucher y
+MPSI.</span>
+          </div>
+        </a>
+
+      </div>
+      <div class="col-6 align-self-stretch">
+        <a href="" class="text-decoration-none text-black-50" [routerLink]="['diagnosticos']">
+          <div class="text-center p-2 mat-elevation-z2 rounded-3 h-100 bg-white">
+            <div class="mt-2"> <img src="assets/svg/003-stethoscope-1.svg" width="50" height="50" /> </div>
+            <h3 class="mat-title mt-3">DIAGNÓSTICO</h3>
+            <span class="mat-small">Tipo de diagnóstico, seguimiento del paciente y procedimientos.</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

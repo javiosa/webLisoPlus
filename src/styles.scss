@@ -52,6 +52,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .dark-color{
   color: $liso-dark;
 }
+.light-color{
+  color: $liso-ligth;
+}
 
 //BGs
 .primary-bg{
@@ -66,6 +69,29 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .b-bottom{
   border-bottom-color: $liso-primary;
   border-bottom: solid 3px;
+}
+
+//NAVS
+.nav-pills{
+  .nav-link{
+    color: $liso-dark;
+    &:active, &.active {
+      background-color: $liso-ligth;
+    }
+    &:focus {
+      background-color: $liso-ligth;
+    }
+    &:hover {
+      background-color: $liso-ligth;
+    }
+  }
+
+}
+//MINIFAB PARA NAVEGACIÓN
+.back-fab{
+  //color: $liso-ligth;
+  position: relative;
+  left: 5%;
 }
 
 //ANIMATE ON SCROLL

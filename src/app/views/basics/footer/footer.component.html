@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer id="homeF" *ngIf="isHome" class="footer">
   <div class="row">
     <div class="col-sm-6 col-md-4 footer-navigation">
       <h3><a href="https://www.lisoplus.com">Liso<span>Plus</span></a></h3>
@@ -32,6 +32,16 @@
         <a href=""><img src="assets/svg/011-linkedin.svg" class="img-fluid" width="25"></a>
         <a href="https://www.medicalesp.com" target="_blank"><img src="assets/svg/012-responsive.svg" class="img-fluid" width="25"></a>
       </div>
+    </div>
+  </div>
+</footer>
+<footer id="notHomeF" *ngIf="!isHome" class="fixed-bottom bg-white">
+  <div class="row justify-content-around text-center my-2">
+    <div class="col">
+      <p class="">LisoPlus © 2021</p>
+    </div>
+    <div class="col">
+      <p> <a href="" target="_blank">lisoplus@medicalesp.com</a></p>
     </div>
   </div>
 </footer>
