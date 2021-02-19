@@ -1,15 +1,16 @@
-
-<div class="container text-center p-sm-5">
-  <div class="text-center">
-    <h1 class="mat-title">Herramientas</h1>
-  </div>
-  <div class="row justify-content-center mx-0">
-    <div class="col-4 col-sm-3" *ngFor="let tool of tools;">
-      <div class="rounded light-bg text-dark m-sm-3 p-2 clickable mat-elevation-z2">
-        <img [src]="tool.img" class="img-fluid w-50 m-3">
-        <mat-divider></mat-divider>
-        <p class="my-2">{{tool.name}}</p>
+<div class="container p-sm-5">
+  <div class="row">
+    <div class="col-sm-4 d-flex justify-content-start">
+      <img src="assets/svg/014-medical-app.svg" class="img-fluid  w-50">
+    </div>
+    <div class="col-sm-8 text-end">
+      <h1 class="font-family-title mb-1">Herramientas</h1>
+      <div class="d-flex justify-content-end">
+        <hr class="text-white hr-title">
       </div>
+      <p class="fs-5">LisoPlus te ofrece en este sitio múltiples herramientas útiles para el día a día.</p>
+      <p class="fs-5 fw-bold">SF-36 · GDS-3 · GeneFinder </p>
+      <button class="my-2" mat-button mat-flat-button [routerLink]="['tools']">Ir a Herramientas</button>
     </div>
   </div>
 </div>

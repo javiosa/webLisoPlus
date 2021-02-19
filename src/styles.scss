@@ -4,8 +4,10 @@
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
 @import "palette";
+$primary: $liso-primary;
 @import "~bootstrap/scss/bootstrap";
 @import "~animate.css/animate.min";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
@@ -37,8 +39,38 @@ $lisoplusWEB-theme: mat-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
+$defaultDuration: .3s;
+$shadowColour: rgba(0, 0, 0, .6);
+
+// As is often the case, some devices/browsers need additional code to get CSS to work
+// in the most desired way. These mixins are used to quickly drop in hacks for each element
+@mixin hideTapHighlightColor() {
+  //Prevent highlight colour when element is tapped
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+@mixin hardwareAccel() {
+  //Improve performance on mobile/tablet devices
+  transform: translateZ(0);
+}
+
+@mixin improveAntiAlias() {
+  //Improve aliasing on mobile/tablet devices
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.font-family-title{
+  font-family: 'Poppins', Roboto, sans-serif!important;
+  letter-spacing:1.5px!important;
+}
+.hr-title{
+  width: 50px;
+  height: 3px!important;
+  opacity: 0.6!important;
+}
 
 .clickable{
   cursor: pointer;
@@ -63,12 +95,96 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .light-bg{
   background-color: $liso-ligth;
 }
+.whitesmoke-bg{
+  background-color: $liso-whitesmoke;
+}
+.dirty-bg{
+  background-color: $liso-dirty;
+}
 
 
 //BORDERS
 .b-bottom{
-  border-bottom-color: $liso-primary;
   border-bottom: solid 3px;
+  border-bottom-color: $liso-primary;
+}
+.b-left{
+  border-left: solid 2px;
+  border-left-color: $liso-ligth;
+}
+
+/* BORDER TRANSITIONS */
+/* Outline Outward */
+.outline-outward {
+  display: inline-block;
+  $outerBorderWidth: 2px;
+  $innerBorderWidth: 2px;
+
+  position: relative;
+
+  @include hideTapHighlightColor();
+  @include hardwareAccel();
+  @include improveAntiAlias();
+
+  &.whitesmoke-bg:before{
+    border: $liso-ligth solid $outerBorderWidth;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    //border: $liso-dirty solid $outerBorderWidth;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition-duration: .3s;
+    transition-property: top, right, bottom, left;
+  }
+
+  &:hover:before {
+    top: -($outerBorderWidth + $innerBorderWidth);
+    right: -($outerBorderWidth + $innerBorderWidth);
+    bottom: -($outerBorderWidth + $innerBorderWidth);
+    left: -($outerBorderWidth + $innerBorderWidth);
+  }
+}
+/* Outline Inward */
+.outline-inward {
+  display: inline-block;
+  $outerBorderWidth: 4px;
+  $innerBorderWidth: 4px;
+
+  position: relative;
+
+  @include hideTapHighlightColor();
+  @include hardwareAccel();
+  @include improveAntiAlias();
+
+  &.whitesmoke-bg:before{
+    border: $liso-ligth solid $outerBorderWidth;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    //border: $liso-dirty solid $outerBorderWidth;
+    top: -($outerBorderWidth + $innerBorderWidth) * 2;
+    right: -($outerBorderWidth + $innerBorderWidth) * 2;
+    bottom: -($outerBorderWidth + $innerBorderWidth) * 2;
+    left: -($outerBorderWidth + $innerBorderWidth) * 2;
+    opacity: 0;
+    transition-duration: .3s;
+    transition-property: top, right, bottom, left;
+  }
+
+  &:hover:before {
+    top: -($outerBorderWidth + $innerBorderWidth);
+    right: -($outerBorderWidth + $innerBorderWidth);
+    bottom: -($outerBorderWidth + $innerBorderWidth);
+    left: -($outerBorderWidth + $innerBorderWidth);
+    opacity: 1;
+  }
 }
 
 //NAVS
@@ -114,4 +230,21 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .hide-on-init {
   visibility: hidden;
+}
+
+// HOVER:CSS
+
+/* Grow */
+.grow {
+  display: inline-block;
+  transition-duration: $defaultDuration;
+  transition-property: transform;
+
+  @include hideTapHighlightColor();
+  @include hardwareAccel();
+  @include improveAntiAlias();
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }

@@ -25,6 +25,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./views/blog/blog.module').then((m) => m.BlogModule),
   },
+  {
+    path: 'learning',
+    loadChildren: () =>
+      import('./views/learning/learning.module').then((m) => m.LearningModule),
+  },
   { path: 'faq', component: FaqComponent },
   { path: 'termsData', component: TermsDataComponent },
   { path: 'not-found', component: NotFoundComponent},

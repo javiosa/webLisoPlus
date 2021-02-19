@@ -21,6 +21,9 @@ import { NgxScrollTopModule } from 'ngx-scrolltop';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {FilterPipeModule} from 'ngx-filter-pipe';
 import {FormsModule} from '@angular/forms';
+import { SectionTitleComponent } from './views/shared/section-title/section-title.component';
+import {SharedModule} from '@app/views/shared/shared.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,7 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatIconModule,
     MatDividerModule,
     MatToolbarModule,
@@ -48,11 +52,13 @@ import {FormsModule} from '@angular/forms';
     MatExpansionModule,
     FilterPipeModule,
     FormsModule,
+    SharedModule,
   ],
   providers: [],
-  exports: [
-    FooterComponent
-  ],
+    exports: [
+        FooterComponent,
+        HeaderComponent
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

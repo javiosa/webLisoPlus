@@ -1,0 +1,8 @@
+@import "src/palette";
+
+.tool{
+  &:hover, &:focus, &:active{
+    background-color: lightgray!important;
+    color: $liso-dark!important;
+  }
+}

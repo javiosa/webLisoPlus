@@ -1,0 +1,71 @@
+@import "src/palette";
+.inner_wrap {
+  position: relative;
+  padding:10px 40px;
+  color: $liso-primary;
+  h1 {
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    //font-size:60px;
+    text-align: center;
+    line-height: 60px;
+    margin:15px 0 10px 0;
+    font-weight:500;
+  }
+  p {
+    margin:0 0 15px 0;
+    letter-spacing:1.6px;
+    font-weight:400;
+    span {
+      font-size:0.75rem;
+      text-decoration:underline;
+      color:$liso-ligth;
+    }
+  }
+  span.border_btm {
+    &:after {
+      display: block;
+      content: "";
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      border-bottom: 3px solid $liso-primary;
+      border-right: 3px solid $liso-primary;
+    }
+    &:before {
+      display: block;
+      content: "";
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      bottom: -10px;
+      left: -10px;
+      border-bottom: 3px solid $liso-primary;
+      border-left: 3px solid $liso-primary;
+    }
+  }
+  &:before {
+    display: block;
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border-top: 3px solid $liso-primary;
+    border-left: 3px solid $liso-primary;
+  }
+  &:after {
+    display: block;
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-top: 3px solid $liso-primary;
+    border-right: 3px solid $liso-primary;
+  }
+}

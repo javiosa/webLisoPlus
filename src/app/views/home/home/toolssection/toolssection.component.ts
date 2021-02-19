@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {tools} from '@models/tools';
+import {tools} from '@models/data';
 
 @Component({
   selector: 'app-toolssection',

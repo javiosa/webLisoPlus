@@ -15,18 +15,23 @@ import {MatDividerModule} from '@angular/material/divider';
 import {AnimateOnScrollModule} from 'ng2-animate-on-scroll';
 import {NgwWowModule} from 'ngx-wow';
 import {NgxScrollTopModule} from 'ngx-scrolltop';
+import {MatIconModule} from '@angular/material/icon';
+import { HeadComponent } from './home/head/head.component';
+import {SharedModule} from '@app/views/shared/shared.module';
 
 
 @NgModule({
-  declarations: [HomeComponent, CarouselComponent, JumboComponent, InfosectionComponent, FaqsectionComponent, ChannelsectionComponent, ToolssectionComponent],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    MatButtonModule,
-    NgImageSliderModule,
-    MatDividerModule,
-    NgwWowModule,
-    AnimateOnScrollModule.forRoot()
-  ]
+  declarations: [HomeComponent, CarouselComponent, JumboComponent, InfosectionComponent, FaqsectionComponent, ChannelsectionComponent, ToolssectionComponent, HeadComponent],
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        MatButtonModule,
+        NgImageSliderModule,
+        MatDividerModule,
+        NgwWowModule,
+        AnimateOnScrollModule.forRoot(),
+        MatIconModule,
+        SharedModule
+    ]
 })
 export class HomeModule { }

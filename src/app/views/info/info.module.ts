@@ -12,6 +12,7 @@ import {MatTreeModule} from '@angular/material/tree';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
+import {SharedModule} from '@app/views/shared/shared.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {MatDividerModule} from '@angular/material/divider';
         MatTreeModule,
         MatIconModule,
         MatButtonModule,
-        MatDividerModule
+        MatDividerModule,
+        SharedModule
     ]
 })
 export class InfoModule { }
