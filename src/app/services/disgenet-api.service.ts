@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
 })
 export class DisgenetAPIService {
 
-  private api_key = 'ba82a39866de26e73bd142c8670eb8c3d96e612b '
+  private api_key = 'ba82a39866de26e73bd142c8670eb8c3d96e612b '  //todo Esto no debería estar aquí, lo está para que puedan usarlo al compartirlo con Corunet
   private headers = new HttpHeaders()
     // .set('content-type', 'application/json')
     .set('Cache-Control', 'no-cache')
