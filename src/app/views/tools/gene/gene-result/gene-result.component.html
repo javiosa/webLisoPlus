@@ -1,0 +1,16 @@
+<div *ngFor="let g of data">
+  <div class="rounded p-1 p-sm-3 my-2 mat-elevation-z2 text-secondary">
+    <h3 class="fs-4"><span class="text-uppercase fw-bold mx-2">{{g['symbol']}}</span><span class="text-c">{{g['gene_fullname']}}</span></h3>
+    <mat-divider></mat-divider>
+    <div class="d-flex justify-content-between my-3">
+      <span class="fs-5">DPI: <span class="badge light-bg text-light">{{g['dpi']||'-'}}</span></span>
+      <span class="fs-5">DSI: <span class="badge light-bg text-light">{{g['dsi']||'-'}}</span></span>
+      <span class="fs-5">PLI: <span class="badge light-bg text-light">{{g['pli']||'-'}}</span></span>
+    </div>
+    <div class="d-flex justify-content-around my-3 fs-5">
+      <button mat-stroked-button class="" (click)="getGenDiseases(g['uniprotid'])">Enfermedades: <span class="badge light-bg text-light">{{g['num_diseases']||'-'}}</span></button>
+      <button mat-stroked-button class="" (click)="getGenVariants(g['symbol'])">Variantes: <span class="badge light-bg text-light">{{g['num_variants']||'-'}}</span></button>
+    </div>
+  </div>
+</div>
+

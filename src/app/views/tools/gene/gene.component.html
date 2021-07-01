@@ -1,0 +1,51 @@
+<app-section-title [showBack]="true" [title]="'Buscador'"></app-section-title>
+<div class="container">
+  <h4 class="fs-5 text-center text-secondary my-3">Busca un gene para obtener información relacionada.</h4>
+  <div class="text-center text-muted">
+    <p class="">{{dbInfo['comments']}}</p>
+    <div class="d-flex justify-content-between small ">
+      <p>{{dbInfo['database_version']}}</p>
+      <p>{{dbInfo['lastUpdate']}}</p>
+    </div>
+
+  </div>
+
+  <form class="my-2" [formGroup]="geneForm" (ngSubmit)="onSubmit()">
+    <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="d-flex justify-content-around my-2"
+      color="primary"
+      formControlName="type">
+      <mat-radio-button class="" *ngFor="let t of typesSearch" [value]="t.id">
+        {{t.text}}
+      </mat-radio-button>
+    </mat-radio-group>
+    <div class="d-flex">
+      <div class="flex-grow-1 mx-3">
+        <mat-form-field class="w-100" appearance="legacy" color="accent">
+          <mat-label>Introduce una búsqueda</mat-label>
+          <input matInput placeholder="Nombre" formControlName="searchTerm">
+          <!--        <mat-hint>Hint</mat-hint>-->
+        </mat-form-field>
+      </div>
+      <div class="mx-3">
+        <button mat-button mat-flat-button color="accent" type="submit">
+          Buscar
+        </button>
+      </div>
+    </div>
+  </form>
+  <mat-chip-list aria-label="Fish selection">
+    <mat-chip *ngFor="let s of commonSearchs;" (click)="getData(s.type, s.term)">{{s.name}}</mat-chip>
+  </mat-chip-list>
+<!--  INFO-->
+  <div *ngIf="typesSearchSelected === 1">
+    <app-gene-result [data]="disGenetInfo"></app-gene-result>
+  </div>
+  <div *ngIf="typesSearchSelected === 2">
+    <app-variant-result></app-variant-result>
+  </div>
+  <div *ngIf="typesSearchSelected === 3">
+    <app-disease-result [data]="disGenetInfo"></app-disease-result>
+  </div>
+</div>

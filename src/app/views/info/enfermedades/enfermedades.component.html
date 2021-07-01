@@ -1,0 +1,17 @@
+<app-section-title [showBack]="true" [title]="'Enfermedades'"></app-section-title>
+<div class="container my-3">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Menú</h3>
+      <mat-divider></mat-divider>
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item" *ngFor="let s of sections; let i = index;">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="s.link">{{s.name}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

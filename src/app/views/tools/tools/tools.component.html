@@ -1,1 +1,20 @@
-<p>tools works!</p>
+<app-section-title [showBack]="false" [title]="'Herramientas'"></app-section-title>
+<div class="container">
+  <h4 class="fs-5 text-center text-secondary my-3">Suite de herramientas de útilidad para el día a día relacionado con las enfermedades por depósito lisosomal.</h4>
+  <div class="">
+    <div class="row justify-content-center mx-0">
+      <div class="col-6 col-sm-4 col-md-3" *ngFor="let tool of tools;">
+        <a href="" class="text-decoration-none" [routerLink]="tool.route">
+          <div class="rounded m-sm-3 p-2 clickable mat-elevation-z2 d-flex light-color tool">
+            <img [src]="tool.img" width="50" class="img-fluid mx-2">
+            <div class="b-left">
+              <p class="fw-bold  fs-5 mx-2">{{tool.name}}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+

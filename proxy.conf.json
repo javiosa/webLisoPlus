@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "https://www.disgenet.org",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
